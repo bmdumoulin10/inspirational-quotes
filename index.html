@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html ng-app='favQuotesApp'> <!-- add the ng-app directive -->
+
+    <head>
+        <title>Inspirational Quotes</title>
+        <!-- jQuerey -->
+        <script rel='javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js'></script>
+        <!-- CSS Framework -->
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css'></script>
+        <!-- Personal CSS -->
+        <link rel='stylesheet' href='main.css'></script>   
+        <!-- Angular -->
+        <script rel='javascript' src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular.js'></script>
+    </head>
+    
+    <body class='container' ng-controller='formController as formCtrl'>
+        
+        <div>
+            <h1 id='heading'>{{formCtrl.title}}</h1>
+        </div>
+
+        
+        <div>
+            <textarea class="form-control" rows="3" placeholder='Enter a random quote!' ng-model="formCtrl.newQuote"></textarea><br>
+            <input type="text" class="form-control" placeholder="Don't forget to enter your quote's author!" ng-model="formCtrl.newAuthor"><br>
+            <button class="btn btn-default" type="button" ng-click="formCtrl.addQuote()">Submit Quote</button>
+            
+            <ul>
+                <li ng-repeat="quote in formCtrl.enterQuotes">{{ quote.quote }} - {{ quote.author}} <button type="button" class="btn btn-default btn-xs" ng-click='formCtrl.remove($index)'>Delete</button> <button type="button" class="btn btn-default btn-xs">Rate</button></li>
+            </ul>
+        </div>
+ 
+        <!-- Personal JS -->
+        <script rel='javascript' src='main.js'></script>
+    </body>
+</html>

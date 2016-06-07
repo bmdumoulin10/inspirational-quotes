@@ -1,0 +1,20 @@
+body{
+    background-image: url('http://77.design/wp-content/uploads/2015/10/77-Web-Development-Background.jpg');
+}
+
+#heading{
+    font-family: 'Brush Script MT', cursive;
+    font-size: 50px;
+    color: dimgrey;
+}
+
+ul{
+    margin-top: 20px;
+}
+li{
+    font-family: cursive;
+    color: white;
+    font-size: 20px;
+    list-style: none;
+    margin-top: 20px;
+}
